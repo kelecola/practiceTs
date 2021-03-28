@@ -16,15 +16,6 @@
 // 当其他地方发生火灾
 // 你的任务是带上你的人尽可能快的到达现场，同时叫上尽可能多的队伍
 
-// 5 6 0 2
-// 1 2 1 5 3
-// 0 1 1
-// 0 2 2
-// 0 3 1
-// 1 2 1
-// 2 4 1
-// 3 4 1
-
 // Each input file contains one test case. 
 // For each test case, the first line contains 4 positive integers: 
 // N (≤500) - the number of cities (and the cities are numbered from 0 to N−1), 
@@ -42,3 +33,21 @@
 // ​​ , and the maximum amount of rescue teams you can possibly gather. 
 // All the numbers in a line must be separated by exactly one space, 
 // and there is no extra space allowed at the end of a line.
+
+
+// 其实类比开发上面就像上产品给的原型图，晦涩难懂需要拆解需求，不断讨论
+
+// 得出下面的整理结果，再开发效果会比较好
+
+// 题意: 给出N个城市, M条无向边。每个城市中都有一定数目的救援小组，所有边的边权已知
+// 现在给出起点和终点，求从起点到终点的最短距离以及最短路径上救援小组数目之和
+// 如果有多条最短路径，则输出数目之和最大的
+
+// 5 6 0 2      5个城市，6条路，起点是0号城市，终点是2号城市
+// 1 2 1 5 3    0-4号城分别有 [ 1, 2, 1, 5, 3]个小队
+// 0 1 1        0号城市到1号城市  距离为1
+// 0 2 2        0号城市到2号城市  距离为2
+// 0 3 1        0号城市到3号城市  距离为1
+// 1 2 1        1号城市到2号城市  距离为1
+// 2 4 1        2号城市到4号城市  距离为1
+// 3 4 1        3号城市到4号城市  距离为1
