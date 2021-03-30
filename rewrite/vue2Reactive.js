@@ -78,9 +78,10 @@ function defineReactive(obj, k, val) {
 
   let handler = {
     get(target, property) {
-      return target[property];
+      return target[property]; // get进行订阅
     },
     set(target, key, newVal) {
+      // set进行通知
       // console.log('set', target, key, newVal);
       if (val === newVal) return // 值发生改变时通知
       val = newVal
@@ -107,3 +108,5 @@ setTimeout(() => {
 
 
 // 简单的实验vue2 vue3的动态绑定
+
+// 发布订阅模式的 通知的时候的有序性如何保证，如何保证订阅者都被通知到

@@ -105,18 +105,18 @@
 
 // 1. 将url中的query部门提取出来以键值对的方式放到一个对象里面去
 
-const str = 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E5%B0%86url%E4%B8%AD%E7%9A%84query%E9%83%A8%E9%97%A8%E6%8F%90%E5%8F%96%E5%87%BA%E6%9D%A5%E4%BB%A5%E9%94%AE%E5%80%BC%E5%AF%B9%E7%9A%84%E6%96%B9%E5%BC%8F%E6%94%BE%E5%88%B0%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E9%87%8C%E9%9D%A2%E5%8E%BB&fenlei=256&rsv_pq=d24904d70082dabd&rsv_t=c49d3PSAGOdV1BnxUoNYl5DM%2FAsn99Agl3JTL2JWkeDL5fWWSF2so7UfXXk&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=2&rsv_sug1=1&rsv_sug7=001&rsv_sug2=0&rsv_btype=i&prefixsug=%25E5%25B0%2586url%25E4%25B8%25AD%25E7%259A%2584query%25E9%2583%25A8%25E9%2597%25A8%25E6%258F%2590%25E5%258F%2596%25E5%2587%25BA%25E6%259D%25A5%25E4%25BB%25A5%25E9%2594%25AE%25E5%2580%25BC%25E5%25AF%25B9%25E7%259A%2584%25E6%2596%25B9%25E5%25BC%258F%25E6%2594%25BE%25E5%2588%25B0%25E4%25B8%2580%25E4%25B8%25AA%25E5%25AF%25B9%25E8%25B1%25A1%25E9%2587%258C%25E9%259D%25A2%25E5%258E%25BB&rsp=5&rsv_sug9=es_0_1&inputT=245&rsv_sug4=245&rsv_sug=9'
+// const str = 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E5%B0%86url%E4%B8%AD%E7%9A%84query%E9%83%A8%E9%97%A8%E6%8F%90%E5%8F%96%E5%87%BA%E6%9D%A5%E4%BB%A5%E9%94%AE%E5%80%BC%E5%AF%B9%E7%9A%84%E6%96%B9%E5%BC%8F%E6%94%BE%E5%88%B0%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E9%87%8C%E9%9D%A2%E5%8E%BB&fenlei=256&rsv_pq=d24904d70082dabd&rsv_t=c49d3PSAGOdV1BnxUoNYl5DM%2FAsn99Agl3JTL2JWkeDL5fWWSF2so7UfXXk&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=2&rsv_sug1=1&rsv_sug7=001&rsv_sug2=0&rsv_btype=i&prefixsug=%25E5%25B0%2586url%25E4%25B8%25AD%25E7%259A%2584query%25E9%2583%25A8%25E9%2597%25A8%25E6%258F%2590%25E5%258F%2596%25E5%2587%25BA%25E6%259D%25A5%25E4%25BB%25A5%25E9%2594%25AE%25E5%2580%25BC%25E5%25AF%25B9%25E7%259A%2584%25E6%2596%25B9%25E5%25BC%258F%25E6%2594%25BE%25E5%2588%25B0%25E4%25B8%2580%25E4%25B8%25AA%25E5%25AF%25B9%25E8%25B1%25A1%25E9%2587%258C%25E9%259D%25A2%25E5%258E%25BB&rsp=5&rsv_sug9=es_0_1&inputT=245&rsv_sug4=245&rsv_sug=9'
 
-const splitUrl = url => {
-  // 这样去做是ok的,后面的特殊字符会被encode
-  const urlMap = {}
-  const params = url.split('?')[1];
-  params.split('&').forEach(item => {
-    const it = item.split('=')
-    urlMap[it[0]] = decodeURI(it[1])
-  })
-  return urlMap
-}
+// const splitUrl = url => {
+//   // 这样去做是ok的,后面的特殊字符会被encode
+//   const urlMap = {}
+//   const params = url.split('?')[1];
+//   params.split('&').forEach(item => {
+//     const it = item.split('=')
+//     urlMap[it[0]] = decodeURI(it[1])
+//   })
+//   return urlMap
+// }
 
 console.log(splitUrl(str));
 

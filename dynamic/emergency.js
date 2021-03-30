@@ -59,9 +59,9 @@ const matrix = [
   [1, Infinity, Infinity, 0, 1],
   [Infinity, Infinity, 1, 1, 0],
 ]
-const weight = [1, 2, 1, 5, 3]
+// const weight = [1, 2, 1, 5, 3]
 const dp = [0, Infinity, Infinity, Infinity, Infinity]
-const dpw = [...weight]
+// const dpw = [...weight]
 
 const emergency = (matrix, start = 0) => {
   const row = matrix.length
