@@ -25,3 +25,6 @@ function App() {
 }
 
 export default App;
+
+// import c from './pages/aaa';
+// c.a

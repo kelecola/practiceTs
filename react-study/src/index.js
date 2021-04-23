@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
+import LoginPage from './pages/login.jsx'
 import reportWebVitals from './reportWebVitals';
-import PostList from './components/PostList';
+// import PostList from './components/PostList';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <PostList />
+    <LoginPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
